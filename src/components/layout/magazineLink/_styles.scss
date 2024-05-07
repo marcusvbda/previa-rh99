@@ -1,0 +1,32 @@
+.magazine-link {
+    margin-top: 30px;
+    border-radius: var(--radius-md, 8px);
+    background: var(--neutral-grey-blue, rgba(105, 109, 162, 0.1));
+    display: flex;
+    padding: var(--spacing-md, 8px) var(--spacing-xl, 16px);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    .magazine-logo {
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        background-image: url(/images/magazine.svg);
+    }
+
+    a {
+        color: var(--primary-royal-blue, #3f47cc);
+        text-align: center;
+        font-family: var(--font-jost);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md, 8px);
+        text-decoration: unset;
+    }
+}

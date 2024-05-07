@@ -1,7 +1,9 @@
 'use client';
 import './_styles.scss';
 import DefaultCard from '@/components/cards/defaultCard';
+import Collapse from '@/components/collapse';
 import { useState } from 'react';
+import MagazineLink from '../magazineLink';
 
 interface IProps {
     className?: string;
@@ -24,8 +26,76 @@ const ExtraCards = ({ collapse }: IExt): JSX.Element => {
         <>
             {visible && (
                 <>
-                    <DefaultCard>assuntos em alta</DefaultCard>
-                    <DefaultCard>noticias</DefaultCard>
+                    <DefaultCard className="content-card trends">
+                        <>
+                            <h4>Assuntos em alta</h4>
+                            <div className="divisor" />
+                            <div className="trend-items">
+                                <div className="trend-item">Psicologia</div>
+                                <div className="trend-item">Cursos</div>
+                                <div className="trend-item">Cursos</div>
+                                <div className="trend-item">Psicanálise</div>
+                                <div className="trend-item">Psiquiatria</div>
+                                <div className="trend-item">Transtornos</div>
+                                <div className="trend-item">
+                                    Qualidade de vida
+                                </div>
+                                <div className="trend-item">
+                                    Desenvolvimento humano
+                                </div>
+                            </div>
+                        </>
+                    </DefaultCard>
+                    <DefaultCard className="content-card trends">
+                        <>
+                            <h4>Notícias RH99</h4>
+                            <div className="divisor" />
+                            <div className="news-list">
+                                <div className="news-item">
+                                    Confira dez tendências para a área de
+                                    psicologia em 2024
+                                </div>
+                                <div className="news-item">
+                                    Barbie: psicanalista faz análise sobre temas
+                                    abordados no filme
+                                </div>
+                                <div className="news-item">
+                                    Psicóloga lança livro sobre a saúde
+                                    pastoral: ‘Reconhecimento da humanidade dos
+                                    pastores’
+                                </div>
+                                <div className="news-item">
+                                    Terapia não é tudo igual: saiba como
+                                    escolher a linha correta e como encontrar o
+                                    melhor psicólogo
+                                </div>
+                                <div className="news-item">
+                                    Psicologia e saúde mental: 9 cursos grátis
+                                    de universidades estrangeiras
+                                </div>
+                            </div>
+                            <Collapse
+                                content={
+                                    <div className="news-list">
+                                        <div className="news-item">
+                                            Confira dez tendências para a área
+                                            de psicologia em 2024
+                                        </div>
+                                        <div className="news-item">
+                                            Barbie: psicanalista faz análise
+                                            sobre temas abordados no filme
+                                        </div>
+                                        <div className="news-item">
+                                            Psicóloga lança livro sobre a saúde
+                                            pastoral: ‘Reconhecimento da
+                                            humanidade dos pastores’
+                                        </div>
+                                    </div>
+                                }
+                            />
+                            <MagazineLink />
+                        </>
+                    </DefaultCard>
                     <DefaultCard>sugestoes</DefaultCard>
                 </>
             )}
@@ -55,7 +125,7 @@ export default function LeftSection({
                 </div>
                 <div className="item network">Minha rede</div>
             </DefaultCard>
-            <ExtraCards collapse={collapse} />
+            {collapse ? <Collapse content={<ExtraCards />} /> : <ExtraCards />}
         </section>
     );
 }

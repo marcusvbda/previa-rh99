@@ -53,6 +53,8 @@ html {
 
 .text-center {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .mb-4 {
@@ -109,6 +111,20 @@ input {
         &:before {
             background-image: url(/images/filter.svg);
         }
+    }
+}
+
+.content-card {
+    padding: 32px var(--spacing-3xl, 24px) !important;
+
+    h4 {
+        color: var(--neutral-black, #161616);
+        font-family: var(--font-jost);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 133.333% */
+        margin: 0;
     }
 }
 

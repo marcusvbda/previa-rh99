@@ -1,0 +1,28 @@
+.see-more {
+    color: var(--primary-royal-blue, #3f47cc);
+    font-family: var(--font-jost);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    gap: var(--spacing-md, 8px);
+    align-items: center;
+
+    &::after {
+        display: block;
+        background-size: contain;
+        background-image: url(/images/arrow-down.svg);
+        width: 20px;
+        height: 20px;
+        content: '';
+        transition: 0.2s;
+    }
+
+    &.visible {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+}
