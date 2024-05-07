@@ -1,5 +1,6 @@
 import DefaultCard from '@/components/cards/defaultCard';
 import LeftSection from '@/components/layout/leftSection/leftSection';
+import Shortcuts from '@/components/layout/shortcuts';
 
 export default function Home(): JSX.Element {
     return (
@@ -20,7 +21,7 @@ export default function Home(): JSX.Element {
             </section>
             <div className="only-lg ">
                 <section className="only-lg flex-col gap">
-                    <DefaultCard>atalhos</DefaultCard>
+                    <Shortcuts />
                     <DefaultCard>teste de conhecimento</DefaultCard>
                     <DefaultCard>institucional</DefaultCard>
                     <DefaultCard>sugestoes</DefaultCard>
