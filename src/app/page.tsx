@@ -1,4 +1,5 @@
 import DefaultCard from '@/components/cards/defaultCard';
+import Institucional from '@/components/layout/Institutional';
 import KnowledgeTest from '@/components/layout/knowledgeTest';
 import LeftSection from '@/components/layout/leftSection/leftSection';
 import Shortcuts from '@/components/layout/shortcuts';
@@ -25,7 +26,7 @@ export default function Home(): JSX.Element {
                 <section className="only-lg flex-col gap">
                     <Shortcuts />
                     <KnowledgeTest />
-                    <DefaultCard>institucional</DefaultCard>
+                    <Institucional />
                     <SugestionsForYou />
                 </section>
             </div>

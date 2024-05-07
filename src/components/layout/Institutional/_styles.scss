@@ -1,0 +1,58 @@
+.institutional {
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md, 8px);
+
+        .link {
+            border-radius: 8px;
+            background-color: #fefefe;
+            border: none;
+            display: flex;
+            padding: var(--spacing-lg, 12px) var(--spacing-xl, 16px);
+            align-items: center;
+            gap: var(--spacing-md, 8px);
+            color: var(--neutral-dark-grey, #42464a);
+            text-align: center;
+            font-family: var(--font-jost);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px; /* 160% */
+
+            &::before {
+                display: block;
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: block;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &.play {
+                &::before {
+                    background-image: url('/images/play.svg');
+                }
+            }
+
+            &.about {
+                &::before {
+                    background-image: url('/images/about.svg');
+                }
+            }
+
+            &.lgpd {
+                &::before {
+                    background-image: url('/images/lgpd.svg');
+                }
+            }
+
+            &.certification {
+                &::before {
+                    background-image: url('/images/certification.svg');
+                }
+            }
+        }
+    }
+}
