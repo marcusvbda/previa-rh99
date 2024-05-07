@@ -51,6 +51,23 @@ html {
     display: none !important;
 }
 
+.divisor {
+    height: 1px;
+    width: 100%;
+    background-color: var(--neutral-light-grey, #ededed);
+    margin: var(--spacing-3xl, 24px) 0;
+}
+
+button,
+a {
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
 .text-center {
     text-align: center;
     display: flex;

@@ -181,9 +181,9 @@ export default function LeftSection({
     return (
         <section className={`flex-col gap ${className || ''}`}>
             <DefaultCard className="breadcrumb">
-                <div className="item home">Página Inicial</div>
+                <div className="item home active">Página Inicial</div>
                 <div className="item-list">
-                    <div className="item">Todas postagens</div>
+                    <div className="item active">Todas postagens</div>
                     <div className="item">Perguntas</div>
                 </div>
                 <div className="item network">Minha rede</div>

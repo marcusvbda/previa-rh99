@@ -1,0 +1,37 @@
+.sugestion-for-you {
+    gap: var(--spacing-xl, 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .image-suggestion {
+        width: 88px;
+        height: 88px;
+        min-width: 88px;
+        min-height: 88px;
+        background-image: url(/images/sugestion-for-you.svg);
+        display: block;
+        background-repeat: no-repeat;
+    }
+
+    button {
+        border-radius: var(--radius-md, 8px);
+        background: var(--primary-bright-red, #ed1b26);
+        display: flex;
+        padding: var(--spacing-lg, 12px) var(--spacing-3xl, 24px);
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-md, 8px);
+        align-self: stretch;
+        border: unset;
+        color: var(--neutral-white, #fff);
+        text-align: right;
+        font-family: var(--font-jost);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.8px;
+    }
+}
