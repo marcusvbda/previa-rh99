@@ -2,7 +2,7 @@
 import './_styles.scss';
 import DefaultCard from '@/components/cards/defaultCard';
 import Collapse from '@/components/collapse';
-import { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 import MagazineLink from '../magazineLink';
 
 interface IProps {
@@ -96,7 +96,70 @@ const ExtraCards = ({ collapse }: IExt): JSX.Element => {
                             <MagazineLink />
                         </>
                     </DefaultCard>
-                    <DefaultCard>sugestoes</DefaultCard>
+                    <DefaultCard className="content-card trends">
+                        <>
+                            <h4>Sugestões</h4>
+                            <div className="divisor" />
+                            <div className="user-suggestions">
+                                <div className="user-suggestion">
+                                    <div
+                                        className="user-image"
+                                        style={
+                                            {
+                                                '--image': `url(/images/christian.jpeg)`
+                                            } as CSSProperties
+                                        }
+                                    />
+                                    <div className="user-name">
+                                        Christian Dutra
+                                    </div>
+                                    <button>Seguir</button>
+                                </div>
+                                <div className="user-suggestion">
+                                    <div
+                                        className="user-image"
+                                        style={
+                                            {
+                                                '--image': `url(/images/marco.jpeg)`
+                                            } as CSSProperties
+                                        }
+                                    />
+                                    <div className="user-name">
+                                        Marco Sinico
+                                    </div>
+                                    <button>Seguir</button>
+                                </div>
+                                <div className="user-suggestion">
+                                    <div
+                                        className="user-image"
+                                        style={
+                                            {
+                                                '--image': `url(/images/christian.jpeg)`
+                                            } as CSSProperties
+                                        }
+                                    />
+                                    <div className="user-name">
+                                        Christian Dutra
+                                    </div>
+                                    <button>Seguir</button>
+                                </div>
+                                <div className="user-suggestion">
+                                    <div
+                                        className="user-image"
+                                        style={
+                                            {
+                                                '--image': `url(/images/marco.jpeg)`
+                                            } as CSSProperties
+                                        }
+                                    />
+                                    <div className="user-name">
+                                        Marco Sinico
+                                    </div>
+                                    <button>Seguir</button>
+                                </div>
+                            </div>
+                        </>
+                    </DefaultCard>
                 </>
             )}
 
