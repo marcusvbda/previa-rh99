@@ -1,5 +1,5 @@
 'use client';
-
+import './_styles.scss';
 import DefaultCard from '@/components/cards/defaultCard';
 import { useState } from 'react';
 
@@ -47,7 +47,14 @@ export default function LeftSection({
 }: IProps): JSX.Element {
     return (
         <section className={`flex-col gap ${className || ''}`}>
-            <DefaultCard>breadcrumb</DefaultCard>
+            <DefaultCard className="breadcrumb">
+                <div className="item home">Página Inicial</div>
+                <div className="item-list">
+                    <div className="item">Todas postagens</div>
+                    <div className="item">Perguntas</div>
+                </div>
+                <div className="item network">Minha rede</div>
+            </DefaultCard>
             <ExtraCards collapse={collapse} />
         </section>
     );
