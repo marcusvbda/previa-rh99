@@ -2,6 +2,7 @@ import DefaultCard from '@/components/cards/defaultCard';
 import Institucional from '@/components/layout/Institutional';
 import KnowledgeTest from '@/components/layout/knowledgeTest';
 import LeftSection from '@/components/layout/leftSection/leftSection';
+import NewPost from '@/components/layout/newPost';
 import Shortcuts from '@/components/layout/shortcuts';
 import SugestionsForYou from '@/components/layout/sugestionsForYou';
 
@@ -15,10 +16,12 @@ export default function Home(): JSX.Element {
                 <div className="only-sm">
                     <LeftSection collapse />
                 </div>
-                <DefaultCard>novo post</DefaultCard>
+                <NewPost />
                 <div className="feed-list flex-col gap">
                     {Array.from({ length: 10 }, (_, i: number) => (
-                        <DefaultCard key={i}>post</DefaultCard>
+                        <DefaultCard className="content-card post" key={i}>
+                            post
+                        </DefaultCard>
                     ))}
                 </div>
             </section>

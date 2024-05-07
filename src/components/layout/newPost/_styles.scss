@@ -1,0 +1,96 @@
+.new-post {
+    padding: var(--spacing-5xl, 40px) var(--spacing-07, 32px) !important;
+    .post-row {
+        display: flex;
+        gap: var(--spacing-xl, 16px);
+
+        .avatar {
+            height: 68px;
+            width: 68px;
+            min-height: 68px;
+            min-width: 68px;
+            background-image: var(--image);
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 100%;
+        }
+
+        textarea {
+            border-radius: var(--radius-md, 8px);
+            border: 1px solid var(--neutral-grey, #b4b4b4);
+            display: flex;
+            padding: var(--spacing-3xl, 24px) var(--spacing-xl, 16px);
+            align-items: flex-start;
+            gap: var(--spacing-md, 8px);
+            width: 100%;
+            resize: none;
+
+            &::placeholder {
+                color: var(--neutral-grey, #b4b4b4);
+                font-family: var(--font-jost);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 125% */
+            }
+        }
+    }
+
+    .divisor {
+        margin: 32px 0;
+    }
+
+    .btns-rows {
+        width: 100%;
+        display: flex;
+        gap: var(--spacing-md, 8px);
+
+        .btn-rounded {
+            display: block;
+            content: '';
+            border-radius: 24px;
+            background: var(--neutral-grey-blue, rgba(105, 109, 162, 0.1));
+            display: flex;
+            width: 48px;
+            height: 48px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            background: var(--neutral-grey-blue, rgba(105, 109, 162, 0.1));
+            border: none;
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &.image {
+                background-image: url(/images/image.svg);
+            }
+            &.calendar {
+                background-image: url(/images/calendar.svg);
+            }
+            &.papper {
+                background-image: url(/images/papper.svg);
+            }
+        }
+
+        .btn-submit {
+            display: flex;
+            padding: 12px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+            border-radius: 8px;
+            background: var(--primary-bright-red, #ed1b26);
+            color: var(--neutral-white, #fff);
+            font-family: Jost;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 1.6px;
+            border: none;
+        }
+    }
+}
