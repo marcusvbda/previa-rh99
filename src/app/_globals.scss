@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --neutral-grey-blue: #696da21a;
+    --neutral-light-grey: #ededed;
+    --space-lg: 12px 32px;
+    --space-md: 20px;
+    --space-sm: 12px;
+    --spacing-07: 32px;
+    --spacing-05: 22px;
+    --spacing-04: 18px;
+    --neutral-black: #161616;
+    --font-jost: 'Jost', sans-serif;
+    --neutral-dark-grey: #42464a;
+}
+
+body {
+    margin: 0;
+    padding: 32px 64px;
+    background-image: url(/images/background-template.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap {
+    gap: var(--spacing-07, 32px);
+}
+
+html {
+    box-sizing: border-box;
+    background-color: blue;
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 27.35%,
+            #fff 83.12%
+        ),
+        var(--neutral-grey-blue, rgba(105, 109, 162, 0.1));
+}
+
+.only-sm {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+main.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: var(--spacing-07, 32px);
+}
+
+@media screen and (max-width: 992px) {
+    .gap {
+        gap: var(--spacing-05, 32px);
+    }
+
+    .only-lg {
+        display: none !important;
+    }
+
+    .only-sm {
+        display: none !important;
+    }
+
+    body {
+        padding: var(--space-md, 20px);
+    }
+
+    main.main-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: var(--spacing-05, 22px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gap {
+        gap: var(--spacing-04, 32px);
+    }
+
+    .only-lg {
+        display: none !important;
+    }
+
+    .only-sm {
+        display: block !important;
+    }
+
+    body {
+        padding: var(--space-sm, 12px);
+    }
+
+    main.main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hide-sm {
+        display: none !important;
+    }
+
+    body {
+        background-image: unset !important;
+    }
+}

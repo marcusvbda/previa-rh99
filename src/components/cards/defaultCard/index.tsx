@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
-import "./_styles.scss";
+import { ReactNode } from 'react';
+import './_styles.scss';
 
 interface IProps {
-  className?: string;
-  children: ReactNode;
+    className?: string;
+    children: ReactNode;
 }
 
 export default function DefaultCard({
-  className,
-  children,
+    className,
+    children
 }: IProps): JSX.Element {
-  return <div className={`default-card ${className || ""}`}>{children}</div>;
+    return <div className={`default-card ${className || ''}`}>{children}</div>;
 }
