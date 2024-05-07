@@ -1,0 +1,39 @@
+.notifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .number-badge {
+        display: flex;
+        padding: 2px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -1px;
+        right: 3px;
+        border-radius: 80px;
+        background: var(--primary-bright-red, #ed1b26);
+        color: var(--neutral-white, #fff);
+        text-align: center;
+        font-family: var(--font-jost);
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 10px; /* 100% */
+        letter-spacing: 0.4px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .notifications {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notifications {
+        display: none;
+    }
+}

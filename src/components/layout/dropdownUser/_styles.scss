@@ -1,0 +1,48 @@
+.dropdown-user {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl, 16px);
+    span {
+        color: var(--neutral-dark-grey, #42464a);
+        text-align: center;
+        font-family: var(--font-jost);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: var(--spacing-3xl, 24px);
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--primary-royal-blue, #3f47cc);
+        border-radius: 100%;
+        position: relative;
+        background-image: var(--image);
+        background-repeat: no-repeat;
+        background-size: contain;
+        svg {
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .dropdown-user {
+        span {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-user {
+        span {
+            display: none;
+        }
+    }
+}
