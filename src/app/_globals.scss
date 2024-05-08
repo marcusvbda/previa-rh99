@@ -5,6 +5,7 @@
     --neutral-light-grey: #ededed;
     --spacing-md: 8px;
     --spacing-xl: 16px;
+    --spacing-2xl: 32px;
     --space-lg: 12px 32px;
     --space-md: 20px;
     --space-sm: 12px;
@@ -17,6 +18,11 @@
     --neutral-grey: #b4b4b4;
     --primary-bright-red: #ed1b26;
     --primary-royal-blue: #3f47cc;
+}
+
+.responsive-image {
+    position: relative;
+    aspect-ratio: var(--ratio);
 }
 
 body {
